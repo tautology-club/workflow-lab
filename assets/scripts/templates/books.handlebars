@@ -1,0 +1,26 @@
+<h1>List of all books</h1>
+<hr>
+
+{{#each books as |book|}}
+
+<!--handlebars will list all books individually.  -->
+ <div>
+   <div>
+    <h3 data-id="{{book.id}}"> ID: {{book.id}} </h3>
+    <h4>Title: {{#if book.title}}
+      {{book.title}}
+    {{else}}
+      No Book Provided.
+    {{/if}}
+  </h4>
+    <h4>Author: {{#if book.author}}
+      {{book.author}}
+    {{else}}
+      No Author Provided.
+      {{/if}}
+    </h4>
+    </div>
+  </div>
+  <hr>
+
+  {{/each}}
